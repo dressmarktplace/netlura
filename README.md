@@ -11,4 +11,4 @@ Este projeto é um clone da interface da Netflix
 *   **JavaScript**
 *   **GitHub Pages**
 
-
+Confira o projeto: https://netlura-three.vercel.app/index.html
