@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header class="navbar" id="navbar">
+        <div class="navbar-left">
+            <a href="index.html" aria-label="Netflix">
+                <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix">
+            </a>
+        </div>
+        <div class="navbar-right">
+            <button id="theme-toggle" aria-label="Alternar tema">Alterar Tema</button>
+        </div>
+    </header>
+
+    <main>
+        <h1 class="main-title">Quem está assistindo?</h1>
+
+        <section class="profiles" aria-label="Perfis de usuários">
+            <ul class="profile-list">
+                <li>
+                    <a href="./catalogo/catalogo.html" class="perfil">
+                        <article class="profile selected" aria-label="Perfil selecionado: Álvaro">
+                            <figure>
+                                <img src="assets/perfil-1.png" alt="Álvaro">
+                            </figure>
+                        </article>
+                        <p class="profile-name">Rick Mitchell</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="./catalogo/catalogo.html" class="perfil">
+                        <article class="profile" aria-label="Perfil: Julia">
+                            <figure>
+                                <img src="assets/perfil-2.png" alt="Julia">
+                            </figure>
+                        </article>
+                        <p class="profile-name">Katie Mitchell</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="./catalogo/catalogo.html" class="perfil">
+                        <article class="profile" aria-label="Perfil: Crianças">
+                            <figure>
+                                <img src="assets/perfil-3.png" alt="Crianças">
+                            </figure>
+                        </article>
+                        <p class="profile-name">Pal robot</p>
+                    </a>
+                </li>
+                <li>
+                    <article class="profile add-profile" aria-label="Adicionar perfil">
+                        <figure>
+                            <div class="add-icon">+</div>
+                        </figure>
+                    </article>
+                    <p class="profile-name">Adicionar perfil</p>
+                </li>
+            </ul>
+        </section>
+
+        <div class="manage-profiles">
+            <button id="manage-profiles-btn" type="button">Gerenciar perfis</button>
+        </div>
+    </main>
+
+    <div id="manage-profiles-overlay" class="manage-profiles-overlay">
+        <div class="manage-card">
+            <button id="close-manage-profiles" class="close-form" aria-label="Fechar">&times;</button>
+            <h2>Gerenciar perfis</h2>
+            <p>Remova perfis criados ou feche para voltar à seleção.</p>
+            <ul id="manage-profile-list" class="manage-profile-list"></ul>
+            <button id="done-managing" type="button" class="save-profile-btn">Concluído</button>
+        </div>
+    </div>
+
+    <!-- Modal de criação de perfil -->
+    <div id="profile-form-overlay" class="profile-form-overlay" style="display:none;">
+        <div class="profile-form-card">
+            <button id="close-profile-form" class="close-form" aria-label="Fechar">&times;</button>
+            <h2>Criar novo perfil</h2>
+            <p>Escolha um nome e um avatar</p>
+            <label for="new-profile-name">Nome ou apelido</label>
+            <input id="new-profile-name" type="text" placeholder="Digite seu nome" maxlength="15" autofocus>
+
+            <div class="avatar-options" id="avatar-options">
+                <button type="button" class="avatar-option selected" data-src="assets/perfil-1.png" title="Avatar 1">
+                    <img src="assets/perfil-1.png" alt="Avatar 1">
+                </button>
+                <button type="button" class="avatar-option" data-src="assets/perfil-2.png" title="Avatar 2">
+                    <img src="assets/perfil-2.png" alt="Avatar 2">
+                </button>
+                <button type="button" class="avatar-option" data-src="assets/perfil-3.png" title="Avatar 3">
+                    <img src="assets/perfil-3.png" alt="Avatar 3">
+                </button>
+            </div>
+
+            <button id="save-profile-btn" type="button" class="save-profile-btn">Criar perfil</button>
+        </div>
+    </div>
+    <script src="js/index.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
