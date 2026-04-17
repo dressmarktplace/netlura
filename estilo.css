@@ -726,5 +726,51 @@ header h1 {
   .profile:hover {
     transform: translateY(-3px) scale(1.02); /* hover suave */
   }
+
+  /* Tira o sublinhado de todos os links de perfil */
+.perfil {
+    text-decoration: none;
+    color: inherit; /* Mantém a cor original do texto */
+}
+
+/* Garante que o nome do perfil não tenha sublinhado */
+.profile-name {
+    text-decoration: none;
+}
+
+body {
+    overflow-x: hidden; /* Esconde a barra de rolagem horizontal */
+}
+
+.profile-list {
+    display: flex;            /* Ativa o modo "lado a lado" */
+    flex-direction: row;      /* Garante que fiquem em linha */
+    justify-content: center;  /* Centraliza o grupo de perfis na tela */
+    align-items: flex-start;  /* Alinha todos pelo topo */
+    gap: 30px;                /* Cria um espaço entre um perfil e outro */
+    list-style: none;         /* Tira as bolinhas da lista */
+    padding: 0;               /* Remove recuos automáticos */
+    margin: 20px 0;           /* Dá um espaço em cima e embaixo da lista */
+}
+
+/* Garante que cada item da lista não ocupe a largura toda */
+.profile-list li {
+    display: inline-block;
+}
+
+.main-title {
+    text-decoration: none; /* Garante que não tenha sublinhado */
+    border: none;          /* Remove qualquer borda que pareça linha */
+    text-align: center;    /* Mantém centralizado */
+    margin-top: 50px;      /* Espaço legal do topo */
+    font-size: 3.5rem;     /* Tamanho de destaque */
+    color: white;          /* Cor branca clássica */
+}
+
+/* Se o h1 estiver dentro de um link, isso aqui mata a linha: */
+a {
+    text-decoration: none !important; 
+}
+
 }
 
